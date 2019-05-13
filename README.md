@@ -1,5 +1,10 @@
 # scheduler
 
+![build status](https://travis-ci.org/prprprus/scheduler.svg?branch=master)
+[![codecov](https://codecov.io/gh/prprprus/scheduler/branch/master/graph/badge.svg)](https://codecov.io/gh/prprprus/scheduler)
+![godoc](https://godoc.org/github.com/prprprus/scheduler)
+![license](https://github.com/prprprus/scheduler/blob/master/LICENSE)
+
 [中文文档](https://github.com/prprprus/scheduler/blob/master/README-zh.md)
 
 ## Introduction
