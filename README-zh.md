@@ -8,11 +8,6 @@ scheduler 是 Go 语言实现的作业调度工具包。它提供了一种简单
 
 ## 功能
 
-- Delay execution, accurate to a second
-- Periodic execution, accurate to a second, like the cron style but more flexible
-- Cancel job
-- Failure retry (temporarily try again)
-
 - 延迟执行，精确到一秒钟
 - 周期性执行，精确到一秒钟，类似 cron 的风格，但是更加的灵活
 - 取消 job
@@ -126,10 +121,6 @@ func main() {
 [完整的文档]()
 
 ## Contribution
-
-Thank you for your interest in contribution of scheduler, your help and contribution is very valuable. 
-
-You can submit issue and requests or fork, please submit an issue before submitting pull requests.
 
 非常感谢你对该项目感兴趣，你的帮助对我来说是非常宝贵的。你可以提交 issue、pull requests 以及 fork，建议在 pull requests 之前先提交一个 issue 哈。
 
