@@ -52,12 +52,12 @@ import (
 )
 
 func main() {
-    s, err := scheduler.NewScheduler(1000)
+	s, err := scheduler.NewScheduler(1000)
 	if err != nil {
 		panic(err) // just example
 	}
 
-    // delay with 1 second, job function with arguments
+	// delay with 1 second, job function with arguments
 	jobID := s.Delay().Second(1).Do(task1, "prprprus", 23)
 
 	// delay with 1 minute, job function without arguments
@@ -82,11 +82,11 @@ func main() {
 
 ### 周期性调度
 
-类似 cron 的风格，同样会包括秒、分、小时、天、星期、月，但是它们之间的顺序和数量不需要固定成一个死格式。你可以按照你的个人喜好去进行排列组合。例如，`Second(3).Minute(35).Day(6)` 和 `Minute(35).Day(6).Second(3)` 的效果是一样的。不需要再去记格式了！🎉🎉👏
+类似 cron 的风格，同样会包括秒、分、小时、天、星期、月，但是它们之间的顺序和数量不需要固定成一个死格式。你可以按照你的个人喜好去进行排列组合。例如，`Second(3).Minute(35).Day(6)` 和 `Minute(35).Day(6).Second(3)` 的效果是一样的。不需要再去记格式了！🎉👏
 
-但是为了可读性，推荐按照从小到大（或者从大到小）的顺序使用。😊
+但是为了可读性，推荐按照从小到大（或者从大到小）的顺序使用。
 
-注意：`Day()` 和 `Weekday()` 避免同时出现，除非你清楚知道这天是星期几。😂
+注意：`Day()` 和 `Weekday()` 避免同时出现，除非你清楚知道这天是星期几。
 
 ```Go
 package main
@@ -98,12 +98,12 @@ import (
 )
 
 func main() {
-    s, err := scheduler.NewScheduler(1000)
+	s, err := scheduler.NewScheduler(1000)
 	if err != nil {
 		panic(err) // just example
 	}
 
-    // Specifies time to execute periodically
+	// Specifies time to execute periodically
 	jobID = s.Every().Second(45).Minute(20).Hour(13).Day(23).Weekday(3).Month(6).Do(task1, "prprprus", 23)
 	jobID = s.Every().Second(15).Minute(40).Hour(16).Weekday(4).Do(task2)
 	jobID = s.Every().Second(1).Do(task1, "prprprus", 23)

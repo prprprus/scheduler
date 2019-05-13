@@ -1,5 +1,7 @@
 # scheduler
 
+[中文文档](https://github.com/prprprus/scheduler/blob/master/README-zh.md)
+
 ## Introduction
 
 scheduler is a job scheduling package for Go. It provides a simple, humans-friendly way to schedule the execution of the go function and includes delay and periodic.
@@ -47,12 +49,12 @@ import (
 )
 
 func main() {
-    s, err := scheduler.NewScheduler(1000)
+	s, err := scheduler.NewScheduler(1000)
 	if err != nil {
 		panic(err) // just example
 	}
 
-    // delay with 1 second, job function with arguments
+	// delay with 1 second, job function with arguments
 	jobID := s.Delay().Second(1).Do(task1, "prprprus", 23)
 
 	// delay with 1 minute, job function without arguments
@@ -77,11 +79,11 @@ func main() {
 
 ### Periodic
 
-Like the cron style, it also includes seconds, minutes, hours, days, weekday, and months, but the order and number are not fixed. You can freely arrange and combine them according to your own preferences. For example, the effects of `Second(3).Minute(35).Day(6)` and `Minute(35).Day(6).Second(3)` are the same. No need to remember the format! 🎉🎉👏
+Like the cron style, it also includes seconds, minutes, hours, days, weekday, and months, but the order and number are not fixed. You can freely arrange and combine them according to your own preferences. For example, the effects of `Second(3).Minute(35).Day(6)` and `Minute(35).Day(6).Second(3)` are the same. No need to remember the format! 🎉👏
 
-But for the readability, recommend the chronological order from small to large (or large to small).😊
+But for the readability, recommend the chronological order from small to large (or large to small).
 
-Note: `Day()` and `Weekday()` avoid simultaneous occurrences unless you know that the day is the day of the week.😂
+Note: `Day()` and `Weekday()` avoid simultaneous occurrences unless you know that the day is the day of the week.
 
 ```Go
 package main
@@ -93,12 +95,12 @@ import (
 )
 
 func main() {
-    s, err := scheduler.NewScheduler(1000)
+	s, err := scheduler.NewScheduler(1000)
 	if err != nil {
 		panic(err) // just example
 	}
 
-    // Specifies time to execute periodically
+	// Specifies time to execute periodically
 	jobID = s.Every().Second(45).Minute(20).Hour(13).Day(23).Weekday(3).Month(6).Do(task1, "prprprus", 23)
 	jobID = s.Every().Second(15).Minute(40).Hour(16).Weekday(4).Do(task2)
 	jobID = s.Every().Second(1).Do(task1, "prprprus", 23)
