@@ -118,7 +118,7 @@ func main() {
 
 ## Documentation
 
-[完整的文档]()
+[完整的文档](https://godoc.org/github.com/prprprus/scheduler)
 
 ## Contribution
 

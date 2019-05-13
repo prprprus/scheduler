@@ -120,7 +120,7 @@ func main() {
 
 ## Documentation
 
-[Full documentation]()
+[Full documentation](https://godoc.org/github.com/prprprus/scheduler)
 
 ## Contribution
 
