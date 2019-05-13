@@ -1,0 +1,15 @@
+language: go
+
+go:
+  - 1.11.x
+  - 1.12.x
+  - master
+
+env:
+  - CODECOV_TOKEN="8b07e4a4-c97b-44db-bda3-025a367ea1ae"
+
+script:
+  - go test -v github.com/prprprus/scheduler
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
