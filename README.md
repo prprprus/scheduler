@@ -137,4 +137,4 @@ You can submit issue and pull requests and fork, please submit an issue before s
 
 See [LICENSE](https://github.com/prprprus/scheduler/blob/master/LICENSE) for more information.
 
-✨Easter egg✨: This is the first go project called the scheduler on Github.👻
+have fun✨👻✨
