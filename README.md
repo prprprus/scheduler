@@ -82,7 +82,7 @@ func main() {
 }
 ```
 
-### Periodic
+### Every
 
 Like the cron style, it also includes seconds, minutes, hours, days, weekday, and months, but the order and number are not fixed. You can freely arrange and combine them according to your own preferences. For example, the effects of `Second(3).Minute(35).Day(6)` and `Minute(35).Day(6).Second(3)` are the same. No need to remember the format! 🎉👏
 
