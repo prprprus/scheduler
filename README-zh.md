@@ -135,4 +135,4 @@ func main() {
 
 [LICENSE](https://github.com/prprprus/scheduler/blob/master/LICENSE) 详情.
 
-✨彩蛋✨：该项目是 Github 上第一个名字叫做 scheduler 的 Go 项目。👻
+have fun✨👻✨
