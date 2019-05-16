@@ -136,5 +136,3 @@ You can submit issue and pull requests and fork, please submit an issue before s
 ## License
 
 See [LICENSE](https://github.com/prprprus/scheduler/blob/master/LICENSE) for more information.
-
-have fun✨👻✨

@@ -134,5 +134,3 @@ func main() {
 ## License
 
 [LICENSE](https://github.com/prprprus/scheduler/blob/master/LICENSE) 详情.
-
-have fun✨👻✨
