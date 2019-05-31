@@ -129,9 +129,9 @@ func main() {
 
 ## Contribution
 
-Thank you for your interest in contribution of scheduler, your help and contribution is very valuable. 
+Thank you for your interest in the contribution of scheduler, your help and contribution is very valuable. 
 
-You can submit issue and pull requests and fork, please submit an issue before submitting pull requests.
+You can submit an issue and pull requests and fork, please submit an issue before submitting pull requests.
 
 ## License
 
