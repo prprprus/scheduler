@@ -44,6 +44,8 @@ func task2() {
 
 延迟调度支持四种模式：按秒、分、小时、天。
 
+作为特例，任务将通过 `s.Delay().Do(task)` 立即执行。
+
 ```Go
 package main
 
@@ -60,19 +62,19 @@ func main() {
 	}
 
 	// delay with 1 second, job function with arguments
-	jobID := s.Delay().Second(1).Do(task1, "prprprus", 23)
+	s.Delay().Second(1).Do(task1, "prprprus", 23)
 
 	// delay with 1 minute, job function without arguments
-	jobID = s.Delay().Minute(1).Do(task2)
+	s.Delay().Minute(1).Do(task2)
 
 	// delay with 1 hour
-	jobID = s.Delay().Hour(1).Do(task2)
+	s.Delay().Hour(1).Do(task2)
 
-	// Note: execute immediately
-	jobID = s.Delay().Do(task2)
+	// special: execute immediately
+	s.Delay().Do(task2)
 
 	// cancel job
-	jobID = s.Delay().Day(1).Do(task2)
+	jobID := s.Delay().Day(1).Do(task2)
 	err = s.CancelJob(jobID)
 	if err != nil {
 		panic(err)
@@ -90,6 +92,8 @@ func main() {
 
 注意：`Day()` 和 `Weekday()` 避免同时出现，除非你清楚知道这天是星期几。
 
+作为特例，任务将通过 `s.Every().Do(task)` 每秒被执行一次。
+
 ```Go
 package main
 
@@ -102,18 +106,19 @@ import (
 func main() {
 	s, err := scheduler.NewScheduler(1000)
 	if err != nil {
-		panic(err) // just example
+		panic(err)
 	}
 
 	// Specifies time to execute periodically
-	jobID = s.Every().Second(45).Minute(20).Hour(13).Day(23).Weekday(3).Month(6).Do(task1, "prprprus", 23)
-	jobID = s.Every().Second(15).Minute(40).Hour(16).Weekday(4).Do(task2)
-	jobID = s.Every().Second(1).Do(task1, "prprprus", 23)
+	s.Every().Second(45).Minute(20).Hour(13).Day(23).Weekday(3).Month(6).Do(task1, "prprprus", 23)
+	s.Every().Second(15).Minute(40).Hour(16).Weekday(4).Do(task2)
+	s.Every().Second(1).Do(task1, "prprprus", 23)
 
-	// Note: execute immediately
-	jobID = s.Every().Do(task2)
+	// special: executed once per second
+	s.Every().Do(task2)
 
-	jobID = s.Every().Second(1).Minute(1).Hour(1).Do(task2)
+	// cancel job
+	jobID := s.Every().Second(1).Minute(1).Hour(1).Do(task2)
 	err = s.CancelJob(jobID)
 	if err != nil {
 		panic(err)
