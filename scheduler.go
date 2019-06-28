@@ -293,7 +293,7 @@ func (j *Job) run() {
 	// retry
 	defer func() {
 		if err := recover(); err != nil {
-			time.Sleep(5 * time.Second) // wait for five seconds for now
+			time.Sleep(5 * time.Second) // wait for five seconds
 			rFn.Call(rArgs)
 		}
 	}()
