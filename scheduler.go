@@ -282,7 +282,7 @@ func (j *Job) Do(fn interface{}, args ...interface{}) (jobID string) {
 	return j.ID
 }
 
-// run funtion of job by reflect.
+// run funtion by reflect.
 func (j *Job) run() {
 	rFn := reflect.ValueOf(j.fn)
 	rArgs := make([]reflect.Value, len(j.args))
