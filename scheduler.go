@@ -1,9 +1,9 @@
-// Package scheduler provides a simple, humans-friendly way to schedule the execution of the go function.
-// It includes delay execution and periodic execution.
-//
 // Copyright (c) 2019, prprprus All rights reserved.
 // Use of this source code is governed by a BSD-style .
 // license that can be found in the LICENSE file.
+
+// Package scheduler provides a simple, humans-friendly way to schedule the execution of the go function.
+// It includes delay execution and periodic execution.
 package scheduler
 
 import (
