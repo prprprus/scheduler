@@ -9,7 +9,7 @@
 
 ## Introduction
 
-scheduler is a job scheduling package for Go. It provides a simple, humans-friendly way to schedule the execution of the go function and includes delay and periodic.
+The scheduler is a job scheduling package for Go. It provides a simple, human-friendly way to schedule the execution of the go function and includes delay and periodic.
 
 Inspired by Linux [cron](https://opensource.com/article/17/11/how-use-cron-linux) and Python [schedule](https://github.com/dbader/schedule).
 
@@ -134,7 +134,7 @@ func main() {
 
 ## Contribution
 
-Thank you for your interest in the contribution of scheduler, your help and contribution is very valuable. 
+Thank you for your interest in the contribution of the scheduler, your help and contribution is very valuable. 
 
 You can submit an issue and pull requests and fork, please submit an issue before submitting pull requests.
 
