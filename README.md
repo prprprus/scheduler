@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/prprprus/picture/master/scheduler6.png)
+![scheduler6.png](https://i.loli.net/2019/09/21/CbpFx7TIvSNM1EP.png)
 
 ![build status](https://travis-ci.org/prprprus/scheduler.svg?branch=master)
 [![codecov](https://codecov.io/gh/prprprus/scheduler/branch/master/graph/badge.svg)](https://codecov.io/gh/prprprus/scheduler)
@@ -134,7 +134,7 @@ func main() {
 
 ## Contribution
 
-Thank you for your interest in the contribution of the scheduler, your help and contribution is very valuable. 
+Thank you for your interest in the contribution of the scheduler, your help and contribution is very valuable.
 
 You can submit an issue and pull requests and fork, please submit an issue before submitting pull requests.
 

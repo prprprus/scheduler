@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/prprprus/picture/master/scheduler6.png)
+![scheduler6.png](https://i.loli.net/2019/09/21/CbpFx7TIvSNM1EP.png)
 
 ![build status](https://travis-ci.org/prprprus/scheduler.svg?branch=master)
 [![codecov](https://codecov.io/gh/prprprus/scheduler/branch/master/graph/badge.svg)](https://codecov.io/gh/prprprus/scheduler)
