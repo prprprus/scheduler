@@ -9,9 +9,11 @@
 
 ## Introduction
 
-The scheduler is a job scheduling package for Go. It provides a simple, human-friendly way to schedule the execution of the go function and includes delay and periodic.
+The scheduler is a job scheduling package for Go. It provides a simple, human-friendly way to schedule the execution of
+the go function and includes delay and periodic.
 
-Inspired by Linux [cron](https://opensource.com/article/17/11/how-use-cron-linux) and Python [schedule](https://github.com/dbader/schedule).
+Inspired by Linux [cron](https://opensource.com/article/17/11/how-use-cron-linux),
+[schedule](https://github.com/dbader/schedule) and [gocron](https://github.com/jasonlvhit/gocron).
 
 ## Features
 
@@ -86,7 +88,9 @@ func main() {
 
 ### Every
 
-Like the cron style, it also includes seconds, minutes, hours, days, weekday, and months, but the order and number are not fixed. You can freely arrange and combine them according to your own preferences. For example, the effects of `Second(3).Minute(35).Day(6)` and `Minute(35).Day(6).Second(3)` are the same. No need to remember the format! 🎉👏
+Like the cron style, it also includes seconds, minutes, hours, days, weekday, and months, but the order and number are
+not fixed. You can freely arrange and combine them according to your own preferences. For example, the effects
+of `Second(3).Minute(35).Day(6)` and `Minute(35).Day(6).Second(3)` are the same. No need to remember the format! 🎉👏
 
 But for the readability, recommend the chronological order from small to large (or large to small).
 

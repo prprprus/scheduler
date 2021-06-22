@@ -11,7 +11,8 @@
 
 scheduler 是 Go 语言实现的作业调度工具包。它提供了一种简单、人性化的方式去调度 Go 函数，包括延迟和周期性两种调度方式。
 
-灵感来源于 Linux [cron](https://opensource.com/article/17/11/how-use-cron-linux) 和 Python [schedule](https://github.com/dbader/schedule)。
+灵感来源于 Linux [cron](https://opensource.com/article/17/11/how-use-cron-linux)
+, [schedule](https://github.com/dbader/schedule) 和 [gocron](https://github.com/jasonlvhit/gocron) 。
 
 ## 功能
 
@@ -86,7 +87,8 @@ func main() {
 
 ### 周期性调度
 
-类似 cron 的风格，同样会包括秒、分、小时、天、星期、月，但是它们之间的顺序和数量不需要固定成一个死格式。你可以按照你的个人喜好去进行排列组合。例如，`Second(3).Minute(35).Day(6)` 和 `Minute(35).Day(6).Second(3)` 的效果是一样的。不需要再去记格式了！🎉👏
+类似 cron 的风格，同样会包括秒、分、小时、天、星期、月，但是它们之间的顺序和数量不需要固定成一个死格式。你可以按照你的个人喜好去进行排列组合。例如，`Second(3).Minute(35).Day(6)`
+和 `Minute(35).Day(6).Second(3)` 的效果是一样的。不需要再去记格式了！🎉👏
 
 但是为了可读性，推荐按照从小到大（或者从大到小）的顺序使用。
 
