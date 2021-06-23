@@ -230,13 +230,13 @@ func (j *Job) Do(fn interface{}, args ...interface{}) (jobID string) {
 		for k := range j.Sched {
 			switch k {
 			case Second:
-				second = j.Sched[Second]
+				second += j.Sched[Second]
 			case Minute:
-				second = j.Sched[Minute] * 60
+				second += j.Sched[Minute] * 60
 			case Hour:
-				second = j.Sched[Hour] * 60 * 60
+				second += j.Sched[Hour] * 60 * 60
 			case Day:
-				second = j.Sched[Day] * 60 * 60 * 24
+				second += j.Sched[Day] * 60 * 60 * 24
 			default:
 				panic(ErrJobSched)
 			}
